@@ -22,7 +22,13 @@ Plug 'junegunn/fzf',        { 'do': 'yes \| ./install' }
 Plug 'gregsexton/gitv', { 'on': 'Gitv' }
 Plug 'mbbill/undotree',             { 'on': 'UndotreeToggle'   }
 Plug 'plasticboy/vim-markdown'
-
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'JavaScript-Indent'
+Plug 'jelera/vim-javascript-syntax'
+Plug 'Shutnik/jshint2.vim'
+Plug 'scrooloose/syntastic'
+Plug 'mickaobrien/vim-stackoverflow'
+Plug 'KabbAmine/gulp-vim'
 
 call plug#end()
 
@@ -58,7 +64,8 @@ set backspace=indent,eol,start
 set noimd
 set imi=1
 set ims=-1
-
+set cindent
+set smartindent
 
 " neocomplcache
 let g:acp_enableAtStartup = 0
@@ -173,3 +180,18 @@ nnoremap <Leader>G :Goyo<CR>
 " vim-markdown
 " ----------------------------------------------------------------------------
 let g:vim_markdown_initial_foldlevel = &foldlevelstart
+
+
+"--------------------
+" Syntastic settings
+"--------------------
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*\ %t\ [%l\ %c]
+
+let g:syntastic_html_checkers = [] " Don't check html files
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
