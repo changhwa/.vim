@@ -29,6 +29,7 @@ Plug 'Shutnik/jshint2.vim'
 Plug 'scrooloose/syntastic'
 Plug 'mickaobrien/vim-stackoverflow'
 Plug 'KabbAmine/gulp-vim'
+Plug 'suan/vim-instant-markdown'
 
 call plug#end()
 
